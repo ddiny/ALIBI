@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<script>
+		if(!localStorage.getItem("id")){
+		  window.location.href='index.html';
+		} // 완료시 지우기
+	  </script> 
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/ALB.png" />
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib" />
+	<!-- Meta Description -->
+	<meta name="description" content="" />
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="" />
+	<!-- meta character set -->
+	<meta charset="UTF-8" />
+	<!-- Site Title -->
+	<title>계약서</title>
+
+	<!--CSS =============================================-->
+	<link rel="stylesheet" href="css/linearicons.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+	<script type="text/javascript" src="js/write.js"></script>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+</head>
+<script>
+	function logout(){
+    const userid = localStorage.getItem("id");
+
+    if(localStorage.getItem(userid)){
+        localStorage.removeItem(userid);
+        localStorage.removeItem("id");
+        alert(" 로그아웃 완료 !");
+        window.location.href="index.html"
+    }else{
+        alert("로그인부터 하세요");
+        window.location.href="index.html"
+    }
+}
+</script>
+
+<body>
+	<!-- ================ Start Header Area ================= -->
+  <header class="default-header">
+    <nav class="navbar navbar-expand-lg  navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index_login.html">
+          <img src="img/ALB.png" width="21" height="21">
+          <img src="img/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="lnr lnr-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li><a href="index_login.html">Home</a></li>
+            <li><a href="about_login.html">About</a></li>
+            <li><a href="apply_login.html">Apply</a></li>
+            <li><a href="contact_login.html">Contact</a></li>
+            <li><a href="writecert.html">Form</a></li>
+            <li><a href="verify.html">verify</a></li>
+            <li><a href="userPage.html">My Info</a></li>
+            <li><a href="#" onclick="logout();">Logout</a></li>
+            <li>
+              <button class="search">
+                <span class="lnr lnr-magnifier" id="search"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="search-input" id="search-input-box">
+      <div class="container">
+        <form class="d-flex justify-content-between">
+          <input type="text" class="form-control" id="search-input" placeholder="Search Here" />
+          <button type="submit" class="btn"></button>
+          <span class="lnr lnr-cross" id="close-search" title="Close Search"></span>
+        </form>
+      </div>
+    </div>
+  </header>
+	<!-- ================ End Header Area ================= -->
+
+	<!-- ================ start banner Area ================= -->
+	<section class="banner-area">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-12 banner-right">
+					<h1 class="text-white">
+						근로계약서
+					</h1>
+					<p class="mx-auto text-white  mt-20 mb-40">
+						근로자와 사업주 모두의 권리보호를 위해 반드시 필요한 문서입니다.
+					</p>
+					<div class="link-nav">
+						<span class="box">
+							<a href="index_login.html">Home </a>
+							<i class="lnr lnr-arrow-right"></i>
+							<a href="writecert.html">근로계약서</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ================ End banner Area ================= -->
+	
+	<!-- Start 근로계약서란 Area -->
+	<section class="feature-area">
+		<div class="container-fluid">
+				<div class="d-flex ml-20">
+					<h3 class="text-heading">근로계약서란?</h3>
+				</div>
+				<div class= "ml-20">
+					<p>
+						근로자가 일을 하기 전에 고용주로부터 그 대가를 지급받기로 서로 약속을 하고<br>
+						임금, 근로시간, 휴일 등의주요 근로 조건들이
+						명시되어 있어야 하며 작성하지 않을 경우 500만원 이하의 벌금이 부과됩니다.
+						<br><br>
+				
+				<em style="font-weight: 400;">제 17조 (근로조건의 서면명시)</em><br>
+				" 사용자는 기간제근로자 또는 단시간근로자와 근로계약을 체결하는 때에는 다음 각 호의 모든 사항을 서면으로 명시하여야 한다.
+				<br>다만, 제6호는 단시간근로자에 한한다. "
+
+				<ul>
+					<li>1. 근로계약기간에 관한 사항</li>
+					<li>2. 근로시간·휴게에 관한 사항</li>
+					<li>3. 임금의 구성항목·계산방법 및 지불방법에 관한 사항</li>
+					<li>4. 휴일·휴가에 관한 사항</li>
+					<li>5. 취업의 장소와 종사하여야 할 업무에 관한 사항</li>
+					<li>6. 근로일 및 근로일별 근로시간</li>
+				</ul>
+				</p>
+			</div>
+			</div>
+	</section>
+
+	<section class="sample-text-area">
+		<div class="container">
+			<div class="col-lg-8 mx-auto">
+				<div id="firstDiv" style="display: block;">
+					<!-- 완료시 none / 처음에는 block    style="display: block;"-->
+					<br>
+					<a class="text-heading" style="font-weight: bold; color:black">계약서 작성</a>
+					<hr>
+					<button class="pt">?</button>
+					<p class="arrow_box">계약서는 회사측에서 생성 가능합니다. 사업자 등록번호를 먼저 인증해주세요. </p>
+					<a>사업자 등록번호 : </a>
+					<input type="text" id="verify_RN" style="border-radius: 5px;" required class="verify_RN-input">
+					<button class="genric-btn info-border circle" onclick="check()">인증</button>
+				</div>
+
+				<div style="display: none;" id="comInfo">
+					<!--style="display: none;"-->
+					<ul>
+						<li class="reNum">사업자 등록번호 : <p id="regNum" style="margin-left: 10px;"> </p>
+						</li>
+						<li class="comName">사업체 이름 : <p id="comName" style="margin-left: 10px;"> </p>
+						</li>
+						<li class="CEOName">대표명 : <p id="CEOName"> </p>
+						</li>
+					</ul>
+					<br>
+					<div class="mb-20 row " style="margin-bottom: 50px; display: inline-block; text-align: center;">
+						<button class="genric-btn info-border circle" onclick="startWrite()">Yes</button>
+						<button class="genric-btn info-border circle" onclick="confirm_no()">No</button>
+					</div>
+					<hr>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!---style="display : none;" 근로계약서 작성 --->
+	<section class="sample-text-area" id="write_div" style="display : none;" >
+		<div class="container">
+			<div class="col-lg-8 mx-auto">
+				<h3 class="mb-30">근로계약서 작성</h3>
+				<div class="mt-10">사업주 명
+					<input type="text" id="userid" name="userid" placeholder="사업주 명을 입력해주세요." onfocus="this.placeholder = ''"
+						onblur="this.placeholder = '사업주 명을 입력해주세요'" required class="single-input">
+				</div>
+				<div class="mt-10">사업체 명
+					<input type="text" id="comid" name="comid" placeholder="사업체 명을 입력해주세요." onfocus="this.placeholder = ''"
+						onblur="this.placeholder = '사업체 명을 입력해주세요.'" required class="single-input">
+				</div>
+				<div class="mt-10">근로자 명
+					<input type="text" id="targetid" name="targetid" placeholder="근로자 아이디를 입력해주세요." onfocus="this.placeholder = ''"
+						onblur="this.placeholder = '근로자 아이디를 입력해주세요'" required class="single-input">
+					<button style="margin-top: 10px;" class="genric-btn small primary-border" onclick="checkid()">확인</button>
+				</div>
+				<div class="mt-10">근로자 주소
+					<input type="text" id="useraddress" placeholder="근로자분의 주소를 입력해주세요." onfocus="this.placeholder = ''"
+						onblur="this.placeholder = '근로자분의 주소를 입력해주세요.'" required class="single-input">
+				</div>
+				<div class="mt-10">근로자 연락처
+					<input type="tel" id="userphone" placeholder="근로자분의 연락처를 입력해주세요." onfocus="this.placeholder = ''"
+						onblur="this.placeholder = '근로자분의 연락처를 입력해주세요.'" required class="single-input">
+				</div>
+				<div class="mt-10">계약기간
+					<div class="Contract-term">
+						<div id="start_date">
+							<div class="form-select-year">
+								<select id="start_year" name="start_year">
+									<option value="1">년</option>
+									<option value="2">2020년</option>
+									<option value="3">2021년</option>
+									<option value="4">2022년</option>
+									<option value="5">2023년</option>
+								</select>
+							</div>
+							<div class="form-select-month">
+								<select id="start_month" name="start_month">
+									<option value="1">월</option>
+									<option value="2">1월</option>
+									<option value="3">2월</option>
+									<option value="4">3월</option>
+									<option value="5">4월</option>
+									<option value="6">5월</option>
+									<option value="7">6월</option>
+									<option value="8">7월</option>
+									<option value="9">8월</option>
+									<option value="10">9월</option>
+									<option value="11">10월</option>
+									<option value="12">11월</option>
+									<option value="13">12월</option>
+								</select>
+							</div>
+							<div class="form-select-day">
+								<select id="start_day" name="start_day">
+									<option value="1">일</option>
+									<option value="2">1일</option>
+									<option value="3">2일</option>
+									<option value="4">3일</option>
+									<option value="5">4일</option>
+									<option value="6">5일</option>
+									<option value="7">6일</option>
+									<option value="8">7일</option>
+									<option value="9">8일</option>
+									<option value="10">9일</option>
+									<option value="11">10일</option>
+									<option value="12">11일</option>
+									<option value="13">12일</option>
+									<option value="14">13일</option>
+									<option value="15">14일</option>
+									<option value="16">15일</option>
+									<option value="17">16일</option>
+									<option value="18">17일</option>
+									<option value="19">18일</option>
+									<option value="20">19일</option>
+									<option value="21">20일</option>
+									<option value="22">21일</option>
+									<option value="23">22일</option>
+									<option value="24">23일</option>
+									<option value="25">24일</option>
+									<option value="26">25일</option>
+									<option value="27">26일</option>
+									<option value="28">27일</option>
+									<option value="29">28일</option>
+									<option value="30">29일</option>
+									<option value="31">30일</option>
+									<option value="32">31일</option>
+								</select>
+							</div>
+						</div>
+
+						<p class="wave"> &nbsp; &nbsp; ~ &nbsp; &nbsp;</p>
+
+						<div id="end_date">
+							<div class="form-select-year">
+								<select id="end_year" name="end_year">
+									<option value="1">년</option>
+									<option value="2">2020년</option>
+									<option value="3">2021년</option>
+									<option value="4">2022년</option>
+									<option value="5">2023년</option>
+								</select>
+							</div>
+							<div class="form-select-month">
+								<select id="end_month" name="end_month">
+									<option value="1">월</option>
+									<option value="2">1월</option>
+									<option value="3">2월</option>
+									<option value="4">3월</option>
+									<option value="5">4월</option>
+									<option value="6">5월</option>
+									<option value="7">6월</option>
+									<option value="8">7월</option>
+									<option value="9">8월</option>
+									<option value="10">9월</option>
+									<option value="11">10월</option>
+									<option value="12">11월</option>
+									<option value="13">12월</option>
+								</select>
+							</div>
+							<div class="form-select-day">
+								<select id="end_day" name="end_day">
+									<option value="1">일</option>
+									<option value="2">1일</option>
+									<option value="3">2일</option>
+									<option value="4">3일</option>
+									<option value="5">4일</option>
+									<option value="6">5일</option>
+									<option value="7">6일</option>
+									<option value="8">7일</option>
+									<option value="9">8일</option>
+									<option value="10">9일</option>
+									<option value="11">10일</option>
+									<option value="12">11일</option>
+									<option value="13">12일</option>
+									<option value="14">13일</option>
+									<option value="15">14일</option>
+									<option value="16">15일</option>
+									<option value="17">16일</option>
+									<option value="18">17일</option>
+									<option value="19">18일</option>
+									<option value="20">19일</option>
+									<option value="21">20일</option>
+									<option value="22">21일</option>
+									<option value="23">22일</option>
+									<option value="24">23일</option>
+									<option value="25">24일</option>
+									<option value="26">25일</option>
+									<option value="27">26일</option>
+									<option value="28">27일</option>
+									<option value="29">28일</option>
+									<option value="30">29일</option>
+									<option value="31">30일</option>
+									<option value="32">31일</option>
+								</select>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="mt-10">근무 장소
+					<input type="text" id="storename" name="storename" placeholder="근무장소를 입력해주세요." onfocus="this.placeholder = ''"
+						onblur="this.placeholder = '근무장소를 입력해주세요.'" required class="single-input">
+				</div>
+
+				<div class="mt-10">업무 내용
+					<input type="text" id="do" name="do" placeholder="업무내용 및 활동내역을 입력해주세요." onfocus="this.placeholder = ''"
+						onblur="this.placeholder = '업무내용 및 활동내역을 입력해주세요.'" required class="single-input">
+				</div>
+
+				<div class="mt-10">근로시간
+					<div class="worktime">
+						<div class="worktime-start">
+							<input type="text" id="start_work" name="start_day" placeholder="시작시간" onfocus="this.placeholder = ''"
+								onblur="this.placeholder = '시작시간'" required class="single-input-time-s">
+						</div>
+
+						<p class="wave"> &nbsp; &nbsp; ~ &nbsp; &nbsp;</p>
+
+						<div class="worktime-end">
+							<input type="text" id="end_work" name="end_day" placeholder="종료시간" onfocus="this.placeholder = ''"
+								onblur="this.placeholder = '종료시간'" required class="single-input-time-e">
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-10">근무일
+					<ul>
+						<div class="workday">
+							<li><input type="radio" id="rdo1" name="day" value="주1일">
+								<lable for="day">주1일</lable>
+							</li>
+							<li><input type="radio" id="rdo1" name="day" value="주5일">
+								<lable for="rdo1">주5일</lable>
+							</li>
+						</div>
+						<div class="workday">
+							<li><input type="radio" id="rdo1" name="day" value="주2일">
+								<lable for="rdo1">주2일</lable>
+							</li>
+							<li><input type="radio" id="rdo1" name="day" value="주6일">
+								<lable for="rdo1">주6일</lable>
+							</li>
+						</div>
+						<div class="workday">
+							<li><input type="radio" id="rdo1" name="day" value="주3일">
+								<lable for="rdo1">주3일</lable>
+							</li>
+							<li><input type="radio" id="rdo1" name="day" value="매일">
+								<lable for="rdo1">매일</lable>
+							</li>
+						</div>
+						<div class="workday">
+							<li><input type="radio" id="rdo1" name="day" value="주4일">
+								<lable for="rdo1">주4일</lable>
+							</li>
+						</div>
+					</ul>
+				</div>
+
+				<div class="mt-70">주휴일
+					<ul>
+						<li class="restday"><input type="checkbox" id="chk1" name="rest" value="월">
+							<lable for="chk1">월</lable>
+						</li>
+						<li class="restday"><input type="checkbox" id="chk1" name="rest" value="화">
+							<lable for="chk1">화</lable>
+						</li>
+						<li class="restday"><input type="checkbox" id="chk1" name="rest" value="수">
+							<lable for="chk1">수</lable>
+						</li>
+						<li class="restday"><input type="checkbox" id="chk1" name="rest" value="목">
+							<lable for="chk1">목</lable>
+						</li>
+						<li class="restday"><input type="checkbox" id="chk1" name="rest" value="금">
+							<lable for="chk1">금</lable>
+						</li>
+						<li class="restday"><input type="checkbox" id="chk1" name="rest" value="토">
+							<lable for="chk1">토</lable>
+						</li>
+						<li class="restday"><input type="checkbox" id="chk1" name="rest" value="일">
+							<lable for="chk1">일</lable>
+						</li>
+					</ul>
+				</div>
+
+				<div class="mt-40">임금
+					<ul>
+						<div class="workpay">
+							<li><input type="radio" id="rdo1" name="pay" value="시급">
+								<lable for="rdo1">시급</lable>
+							</li>
+							<li><input type="radio" id="rdo1" name="pay" value="시급">
+								<lable for="rdo2">월급</lable>
+							</li>
+						</div>
+						<div class="workpay">
+							<li><input type="radio" id="rdo1" name="pay" value="시급">
+								<lable for="rdo1">일급</lable>
+							</li>
+							<li><input type="radio" id="rdo1" name="pay" value="시급">
+								<lable for="rdo1">건별</lable>
+							</li>
+						</div>
+						<div class="workpay">
+							<li><input type="radio" id="rdo1" name="pay" value="시급">
+								<lable for="rdo1">주급</lable>
+							</li>
+							<li><input type="radio" id="rdo1" name="pay" value="시급">
+								<lable for="rdo1">연봉</lable>
+							</li>
+						</div>
+					</ul>
+					<input type="text" id="pay" name="pay" placeholder="원" onfocus="this.placeholder = ''" onblur="this.placeholder = '원'"
+						required class="single-input">
+				</div>
+
+				<div class="mt-20">임급지급일
+					<ul>
+						<div class="form-payday">
+							<li><input type="radio" id="rdo1" name="payday" value="매월">
+								<lable for="rdo1">매월</lable>
+								<input type="number" style="border:none; text-align: right;" min="1" max="31" id="number">일
+							</li>
+						</div>
+						<div class="form-payday">
+							<li><input type="radio" id="rdo1" name="payday" value="매주">
+								<lable for="rdo1">매주</lable>
+							</li>
+						</div>
+						<div class="form-payday">
+							<li><input type="radio" id="rdo1" name="payday" value="매일">
+								<lable for="rdo1">매일</lable>
+							</li>
+						</div>
+					</ul>
+				</div>
+
+				<div class="mt-40">지급방법
+					<ul>
+						<div class="workpay">
+							<li><input type="radio" id="rdo1" name="way" value="직접 지급">
+								<lable for="rdo1">직접 지급 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</lable>
+							</li>
+						</div>
+						<li><input type="radio" id="rdo1" name="way" value="예금 통장 입금">
+							<lable for="rdo1">예금 통장 입금</lable>
+						</li>
+					</ul>
+				</div>
+				<div class="mt-60 agree-part">
+					<input type="checkbox" id="agree" name="agree"> 개인정보 수집 및 동의
+				</div>
+				<hr>
+				<div class="mt-10">사업주 서명
+					<input type="password" id="privkey" name="privkey" placeholder=" 사업주 서명" onfocus="this.placeholder = ''"
+						onblur="this.placeholder = '사업주 서명'" required class="single-input">
+				</div>
+				<hr>
+				<div class="button-group-area">
+					<button class="genric-btn primary-border e-large" onclick="register()">계약서 작성완료</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ================ start footer Area ================= -->
+  <footer class="footer-area section-gap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-6 single-footer-widget">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index_login.html">ALIBI Home</a></li>
+            <li><a href="about_login.html">About ALIBI</a></li>
+            <li><a href="apply_login.html">Apply Part-time Job</a></li>
+            <li><a href="verify.html">Verify yourself</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 single-footer-widget">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="https://eos.io/">EOSIO</a></li>
+            <li><a href="https://www.albamon.com/">알바몬</a></li>
+            <li><a
+                href="http://www.alba.co.kr/Main.asp?utm_source=google&utm_medium=paidsearch&utm_campaign=brand&utm_content=pc_cpc&utm_term=%EC%95%8C%EB%B0%94%EC%B2%9C%EA%B5%AD&gclid=CjwKCAiAq8f-BRBtEiwAGr3DgSsjp-9O2Gd5N87pPN9BKEyAC1zp3ATI1d-UH9JznRu5BMPbiBXvGBoCIWgQAvD_BwE">
+                알바천국</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 single-footer-widget">
+          <h4>Policy</h4>
+          <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 single-footer-widget">
+          <h4>ALIBI</h4>
+          <ul>
+            <li>백석대학교 / (주)알바왕</li>
+            <li>대표전화 : 041-550-9114</li>
+            <li>사업자번호 : 000-00-00000</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 single-footer-widget">
+          <h4>Contact</h4>
+          <p>Do you have any questions about ALIBI?</p>
+          <div class="form-wrap" id="mc_embed_signup">
+            <form target="_blank"
+              action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+              method="get" class="form-inline">
+              <input class="form-control" name="text" placeholder="Your Text" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Your Text '" required="" type="text">
+              <button class="click-btn btn btn-default text-uppercase">Send</button>
+              <div style="position: absolute; left: -5000px;">
+                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+              </div>
+
+              <div class="info"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom row align-items-center">
+        <p class="footer-text m-0 col-lg-8 col-md-12">충청남도 천안시 동남구 백석대학로 1 백석대학교 Tel. 041-550-9114</p>
+
+        <p class="footer-text m-0 col-lg-8 col-md-12">
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> (주)알바왕 All rights reserved
+        </p>
+        <div class="col-lg-4 col-md-12 footer-social">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+	<!-- ================ End footer Area ================= -->
+
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+		integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+		crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/hexagons.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+  <script>
+    if(localStorage.getItem("id")){
+      window.location.href='index_login.html';
+    } // 완료시 지우기
+  </script> 
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/ALB.png" />
+  <!-- Author Meta -->
+  <meta name="author" content="colorlib" />
+  <!-- Meta Description -->
+  <meta name="description" content="" />
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="" />
+  <!-- meta character set -->
+  <meta charset="UTF-8" />
+  <!-- Site Title -->
+  <title>ALIBI</title>
+
+
+  <!--CSS=============================================-->
+  <link rel="stylesheet" href="css/linearicons.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="http://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ================ Start Header Area ================= -->
+  <header class="default-header">
+    <nav class="navbar navbar-expand-lg  navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/ALB.png" width="21" height="21">
+          <img src="img/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="lnr lnr-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="verify.html">verify</a></li>
+            <li><a href="join.html">Login/Join</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li>
+              <button class="search">
+                <span class="lnr lnr-magnifier" id="search"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="search-input" id="search-input-box">
+      <div class="container">
+        <form class="d-flex justify-content-between">
+          <input type="text" class="form-control" id="search-input" placeholder="Search Here" />
+          <button type="submit" class="btn"></button>
+          <span class="lnr lnr-cross" id="close-search" title="Close Search"></span>
+        </form>
+      </div>
+    </div>
+  </header>
+  <!-- ================ End Header Area ================= -->
+
+  <!-- ================ start banner Area ================= -->
+  <section class="home-banner-area">
+    <div class="container">
+      <div class="row justify-content-center fullscreen align-items-center">
+        <div class="col-lg-5 col-md-8 home-banner-left">
+          <h1 class="text-white">
+            Prove yourself <br />
+            to learn with us
+          </h1>
+          <p class="mx-auto text-white  mt-20 mb-40">
+            ALIBI는 여러분의 경력을 증명해줍니다. 당신이 열심히 일한 것에 대한 증명이
+            필요한 순간, ALIBI는 그 순간을 함께합니다.
+          </p>
+        </div>
+        <div class="offset-lg-2 col-lg-5 col-md-12 home-banner-right">
+          <img class="img-fluid" src="img/header-img.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ End banner Area ================= -->
+
+  <!-- ================ Start Feature Area ================= -->
+  <section class="feature-area">
+    <div class="container-fluid">
+      <div class="feature-inner row">
+        <div class="col-lg-2 col-md-6">
+          <div class="feature-item d-flex">
+            <i class="fas fa-user"></i>
+            <div class="ml-20">
+              <a href="join.html">
+              <h4>개인</h4>
+              <p>
+                Join us
+              </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="feature-item d-flex">
+            <i class="fas fa-briefcase"></i>
+            <div class="ml-20">
+              <a href="join.html">
+              <h4>사업자</h4>
+              <p>
+                Join us
+              </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="feature-item d-flex border-right-0">
+            <i class="fas fa-laptop-code"></i>
+            <div class="ml-20">
+              <a href="verify.html">
+              <h4>검증하기</h4>
+              <p>
+                Click
+              </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ End Feature Area ================= -->
+
+  <!-- ================ Start Feature Area  알리바이 목표 ================= -->
+<section class="other-feature-area">
+  <div class="container">
+    <div class="feature-inner row">
+      <div class="col-lg-12">
+        <div class="section-title text-left">
+          <h2>
+            ALIBI's Goal
+          </h2>
+          <p>
+            블록체인을 통해 고용인과 피고용인 사이에서 신뢰할 수 있는 경력을 제공하는 기능을 갖추고 있으며,
+            구직 과정에서의 신뢰성 상승, 무결성 제공, 근로환경을 개선하는 것이 저희의 목표 입니다. 
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="other-feature-item">
+          <i class="ti-key"></i>
+          <h4>무결성</h4>
+          <div>
+            <p>
+              블록체인을 통해 경력증명서 및 근로 조건, 급여 관련 분쟁에서 계약서에 대한 무결성을 제공합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt--160">
+        <div class="other-feature-item">
+          <i class="ti-files"></i>
+          <h4>신뢰성</h4>
+          <div>
+            <p>
+              아르바이트 경력을 블록체인으로 보관하여 경력에 대한 신뢰성 확보가 가능하고, 
+              경력증명서를 통해 구직에서의 신뢰성을 상승시켜줍니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mt--260">
+        <div class="other-feature-item">
+          <i class="ti-medall-alt"></i>
+          <h4>노동환경 개선</h4>
+          <div>
+            <p>
+              경력증명서를 발급받기 위해서는 근로계약서와 퇴직서가 필수로 필요하기 때문에,
+              근로계약서 작성비율이 높아지고, 급여와 시간 등 알바생의 권리를 보장을 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================ End Feature Area ================= -->
+
+  <!-- ================ Start Video Area 알리바이 사용법================= -->
+  <section class="video-area section-gap-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5">
+          <div class="section-title text-white">
+            <h2 class="text-white">
+              How to Use <br>
+            </h2>
+            <p>
+              ALIBI에서는 사용자를 아르바이트생과 점주로 나누어 기능을 사용할 수 있습니다. 
+              근로계약서와 퇴직서를 통해 경력증명서를 발급받을 수 있습니다.
+            </p>
+          </div>
+        </div>
+        <div class="offset-lg-1 col-md-6 video-left">
+          <div class="owl-carousel video-carousel">
+            <div class="single-video">
+              <div class="video-part">
+                <img class="img-fluid" src="img/video-img.jpg" alt="">
+                <div class="overlay"></div>
+                <a class="popup-youtube play-btn" href="">
+                  <img class="play-icon" src="img/play-btn.png" alt="">
+                </a>
+              </div>
+              <h4 class="text-white mb-20 mt-30">Sign Up</h4>
+              <p class="text-white mb-20">
+                ALIBI 이용을 원하는 사용자는 회원가입을 합니다.
+              </p>
+            </div>
+
+            <div class="single-video">
+              <div class="video-part">
+                <img class="img-fluid" src="img/video-img.jpg" alt="">
+                <div class="overlay"></div>
+                <a class="popup-youtube play-btn" href="">
+                  <img class="play-icon" src="img/play-btn.png" alt="">
+                </a>
+              </div>
+              <h4 class="text-white mb-20 mt-30">Writing an employment contract</h4>
+              <p class="text-white mb-20">
+                아르바이트생과 점주는 근로계약서를 작성합니다.
+              </p>
+            </div>
+
+            <div class="single-video">
+              <div class="video-part">
+                <img class="img-fluid" src="img/video-img.jpg" alt="">
+                <div class="overlay"></div>
+                <a class="popup-youtube play-btn" href="">
+                  <img class="play-icon" src="img/play-btn.png" alt="">
+                </a>
+              </div>
+              <h4 class="text-white mb-20 mt-30">Write retirement form</h4>
+              <p class="text-white mb-20">
+                퇴직한 날짜를 추가하여 퇴직서를 작성합니다.
+              </p>
+            </div>
+
+            <div class="single-video">
+              <div class="video-part">
+                <img class="img-fluid" src="img/video-img.jpg" alt="">
+                <div class="overlay"></div>
+                <a class="popup-youtube play-btn" href="">
+                  <img class="play-icon" src="img/play-btn.png" alt="">
+                </a>
+              </div>
+              <h4 class="text-white mb-20 mt-30">Certificate of experience</h4>
+              <p class="text-white mb-20">
+                경력증명서를 만들어 냅니다.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ End Video Area ================= -->
+
+  <!-- ================ Start Feature Area  증명서 ================= -->
+  <section class="other-feature-area">
+    <div class="container">
+      <div class="feature-inner row">
+        <div class="col-lg-12">
+          <div class="section-title text-left">
+            <h2>
+              Provided <br/>
+              function of ALIBI
+            </h2>
+            <p>
+              ALIBI에서는 근로계약서, 퇴직서, 경력증명서 서비스를 지원합니다.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" onclick="location.href='join.html';" style="cursor: pointer;" >
+          <div class="other-feature-item">
+            <i class="far fa-file"></i>
+            <h4>근로계약서</h4>
+            <div>
+              <p>
+                회사가 인력을 채용하고 근로자는 일을 하고 회사로부터 그 대가를 지급받기로 약정하고 작성하는 근로계약 문서입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt--160" onclick="location.href='join.html';" style="cursor: pointer;">
+          <div class="other-feature-item">
+            <i class="far fa-file-alt"></i>
+            <h4>퇴직서</h4>
+            <div>
+              <p>
+                퇴직에 대한 의사를 기재하여 제출하는 문서입니다. 근로계약서 작성 후 퇴직날이 되면 근로계약서에 퇴직날짜를 추가합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt--260" onclick="location.href='join.html';" style="cursor: pointer;">
+          <div class="other-feature-item">
+            <i class="far fa-address-card"></i>
+            <h4>경력증명서</h4>
+            <div>
+              <p>
+                사용자가 일을 했다는 것을 증명해주는 문서입니다. 경력증명서에는 사용자이름, 가게이름, 점주이름, 일한 기간이 나타나있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" onclick="location.href='join.html';" style="cursor: pointer;">
+          <div class="other-feature-item">
+            <i class="fas fa-key"></i>
+            <h4>NFT발급</h4>
+            <div>
+              <p>
+                NFT발급을 통해 블록체인 시스템에 기록하여 안전하게 보호하고 권리를 보장할 수 있습니다. 
+                이에 따라 사용자는 자신의 정보를 좀 더 온전히 소유하고 활용할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt--160" onclick="location.href='apply.html';" style="cursor: pointer;">
+          <div class="other-feature-item">
+            <i class="fas fa-tags"></i>
+            <h4>채용정보</h4>
+            <div>
+              <p>
+                점주들이 아르바이트생을 구하기 위해 올린 모집공고들을 볼 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div-- class="col-lg-4 col-md-6 mt--260">
+          <div class="other-feature-item">
+            <i class="fas fa-donate"></i>
+            <a href="about.html"></a>
+            <h4>수수료 절감</h4>
+            <div>
+              <p>
+                경력증명서를 발급하는데 내는 비용을 감소시켰습니다.
+              </p>
+            </div>
+          </div>
+        </div-->
+      </div>
+    </div>
+  </section>
+  <!-- ================ End Feature Area ================= -->
+
+  <!-- ================ Start Popular Course Area ================= -->
+  <section class="popular-course-area section-gap">
+    <div class="container-fluid">
+      <div class="row justify-content-center section-title">
+        <div class="col-lg-12">
+          <h2>
+            채용정보 <br />
+          </h2>
+          <p>
+            지원가능 알바
+          </p>
+        </div>
+      </div>
+      <div class="owl-carousel popuar-course-carusel">
+        <div class="single-popular-course">
+          <div class="thumb">
+            <img class="f-img img-fluid mx-auto" src="img/alba/p1.jpg" alt="" />
+          </div>
+          <div class="details">
+            <div class="d-flex justify-content-between mb-20">
+              <p class="name">카페</p>
+              <p class="value">8590원</p>
+            </div>
+            <a href="#">
+              <h4>EDIYA COFFEE</h4><br/>
+            </a>
+            <div class="bottom d-flex mt-15">
+              <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <p class="ml-20">25 Reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="single-popular-course">
+          <div class="thumb">
+            <img class="f-img img-fluid mx-auto" src="img/alba/p2.jpg" alt="" />
+          </div>
+          <div class="details">
+            <div class="d-flex justify-content-between mb-20">
+              <p class="name">카페</p>
+              <p class="value">8590원</p>
+            </div>
+            <a href="#">
+              <h4>HOLLYS COFFEE</h4><br/>
+            </a>
+            <div class="bottom d-flex mt-15">
+              <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <p class="ml-20">25 Reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="single-popular-course">
+          <div class="thumb">
+            <img class="f-img img-fluid mx-auto" src="img/alba/p3.jpg" alt="" />
+          </div>
+          <div class="details">
+            <div class="d-flex justify-content-between mb-20">
+              <p class="name">화장품 가게</p>
+              <p class="value">8590원</p>
+            </div>
+            <a href="#">
+              <h4>innisfree <br /><br/></h4>
+            </a>
+            <div class="bottom d-flex mt-15">
+              <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <p class="ml-20">25 Reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="single-popular-course">
+          <div class="thumb">
+            <img class="f-img img-fluid mx-auto" src="img/alba/p4.jpg" alt="" />
+          </div>
+          <div class="details">
+            <div class="d-flex justify-content-between mb-20">
+              <p class="name">음식점</p>
+              <p class="value">8590원</p>
+            </div>
+            <a href="#">
+              <h4>Seogaandcook <br/><br/></h4>
+            </a>
+            <div class="bottom d-flex mt-15">
+              <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <p class="ml-20">25 Reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ End Popular Course Area ================= -->
+
+
+
+  <!-- ================ start footer Area ================= -->
+  <footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Navigation</h4>
+					<ul>
+            <li><a href="index.html">ALIBI Home</a></li>
+						<li><a href="about.html">About ALIBI</a></li>
+						<li><a href="apply.html">Apply Part-time Job</a></li>
+						<li><a href="verify.html">Verify yourself</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Support</h4>
+					<ul>
+            <li><a href="https://eos.io/">EOSIO</a></li>
+						<li><a href="https://www.albamon.com/">알바몬</a></li>
+            <li><a href="http://www.alba.co.kr/Main.asp?utm_source=google&utm_medium=paidsearch&utm_campaign=brand&utm_content=pc_cpc&utm_term=%EC%95%8C%EB%B0%94%EC%B2%9C%EA%B5%AD&gclid=CjwKCAiAq8f-BRBtEiwAGr3DgSsjp-9O2Gd5N87pPN9BKEyAC1zp3ATI1d-UH9JznRu5BMPbiBXvGBoCIWgQAvD_BwE">
+              알바천국</a></li>
+					</ul>
+				</div>
+        <div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Policy</h4>
+					<ul>
+						<li><a href="#">이용약관</a></li>
+						<li><a href="#">개인정보처리방침</a></li>
+					</ul>
+        </div>
+        <div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>ALIBI</h4>
+					<ul>
+						<li>백석대학교 / (주)알바왕</li>
+						<li>대표전화 : 041-550-9114</li>
+						<li>사업자번호 : 000-00-00000</li>
+					</ul>
+        </div>
+				<div class="col-lg-4 col-md-6 single-footer-widget">
+					<h4>Contact</h4>
+					<p>Do you have any questions about ALIBI?</p>
+					<div class="form-wrap" id="mc_embed_signup">
+						<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+						 method="get" class="form-inline">
+							<input class="form-control" name="text" placeholder="Your Text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Text '"
+							 required="" type="text">
+							<button class="click-btn btn btn-default text-uppercase">Send</button>
+							<div style="position: absolute; left: -5000px;">
+								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+							</div>
+
+							<div class="info"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom row align-items-center">
+        <p class="footer-text m-0 col-lg-8 col-md-12">충청남도 천안시 동남구 백석대학로 1 백석대학교  Tel. 041-550-9114</p>
+
+				<p class="footer-text m-0 col-lg-8 col-md-12">
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> (주)알바왕 All rights reserved
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				<div class="col-lg-4 col-md-12 footer-social">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-dribbble"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+  <!-- ================ End footer Area ================= -->
+
+  <script src="js/vendor/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/hexagons.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

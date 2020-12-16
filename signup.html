@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <script>
+        if(localStorage.getItem("id")){
+          window.location.href='index_login.html';
+        } // 완료시 지우기
+      </script> 
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/ALB.png" />
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>Signup</title>
+
+    <!--CSS=============================================-->
+    <link rel="stylesheet" href="css/linearicons.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="http://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="js/main.js" defer></script>
+    <script type="text/javascript" src="js/signup.js" defer></script>
+    <script type="text/javascript" src="js/join.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+<body>
+    <!-- ================ Start Header Area ================= -->
+    <header class="default-header">
+        <nav class="navbar navbar-expand-lg  navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/ALB.png" width="21" height="21">
+                    <img src="img/logo.png" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="lnr lnr-menu"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end align-items-center"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="apply.html">Apply</a></li>
+                        <li><a href="verify.html">verify</a></li>
+                        <li><a href="join.html">Login/Join</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <button class="search">
+                                <span class="lnr lnr-magnifier" id="search"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="search-input" id="search-input-box">
+            <div class="container">
+                <form class="d-flex justify-content-between">
+                    <input type="text" class="form-control" id="search-input" placeholder="Search Here" />
+                    <button type="submit" class="btn"></button>
+                    <span class="lnr lnr-cross" id="close-search" title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+    </header>
+    <!-- ================ End Header Area ================= -->
+
+    <!-- ================ start banner Area ================= -->
+    <section class="banner-area">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-12 banner-right">
+                    <h1 class="text-white">
+                        Join
+                    </h1>
+                    <p class="mx-auto text-white  mt-20 mb-40">
+                        ALIBI 사용자가 되기위한 절차입니다.
+                    </p>
+                    <div class="link-nav">
+                        <span class="box">
+                            <a href="index.html">Home </a>
+                            <i class="lnr lnr-arrow-right"></i>
+                            <a href="join.html">Login/Join</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End banner Area ================= -->
+
+    <section class="registration-area">
+        <div class=" container">
+            <div class=" row align-items-end course-form-section">
+                <div class="col-lg-5">
+                    <div class="section-title text-left text-black ">
+                        <center>
+                            <form action="register.php" method="post" name="twin">
+                                <table width="800" height="450" cellpadding="0"
+                                    style="border-collapse:collapse; font-size:9pt;">
+                                    <tr class="register" height="30">
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">회원 ID</td>
+                                        <td><input type="text" id="userid" name="wUserID" required />
+                                            <input type="button" class="btn1" onclick="checkid()" value="ID중복검사"></td>
+                                    </tr>
+                                    <tr height="7">
+                                        <td colspan="3">
+                                            <hr />
+                                        </td>
+                                    </tr>
+                                    <tr class="register" height="30">
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">EOS Account</td>
+                                        <td class="text-gray"><input type="text" id="eosid" name="wEOSAccount"
+                                                maxlength="12" required />
+                                            <button type="button" class="btn1" onclick="checkeosid()">EOS계정확인</button> *
+                                            a-z, 1-5 are allowed only. Length 12</td>
+
+                                    </tr>
+                                    <tr height="7">
+                                        <td colspan="3">
+                                            <hr />
+                                        </td>
+                                    </tr>
+                                    <tr class="register" height="30">
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">비밀번호</td>
+                                        <td><input type="password" id="password" name="wUserPW" onchange="isSame()"
+                                                required /></td>
+                                    </tr>
+                                    <tr height="7">
+                                        <td colspan="3">
+                                            <hr />
+                                        </td>
+                                    </tr>
+                                    <tr class="register" height="30">
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">비밀번호 확인</td>
+                                        <td><input type="password" name="wUserPWConfirm" id="pwCheck"
+                                                onchange="isSame()" required />&nbsp;&nbsp;<span id="same"></span></td>
+                                    </tr>
+                                    <tr height="7">
+                                        <td colspan="3">
+                                            <hr />
+                                        </td>
+                                    </tr>
+                                    <tr class="register" height="30">
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">이 름</td>
+                                        <td><input type="text" id="name" name="wUserName" required /></td>
+                                    </tr>
+                                    <tr height="7">
+                                        <td colspan="3">
+                                            <hr />
+                                        </td>
+                                    </tr>
+                                    <!--tr class="register" height="30">
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">회 원 정 보</td>
+                                        <td>
+                                            점 주&nbsp;<input type="radio" name="wUserInfo" value="1"
+                                                checked />&nbsp;&nbsp;근 로 자&nbsp;<input type="radio" name="wUserInfo"
+                                                value="2" />
+                                        </td>
+                                    </tr>
+                                    <tr-- height="7">
+                                        <td colspan="3">
+                                            <hr />
+                                        </td>
+                                    </tr-->
+                                    <tr class="register" height="40">
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">전화번호</td>
+                                        <td><input type="tel" id="phone" name="wUserCellPhone" required />
+                                            <input type="button" class="btn1" onclick="sendCode()" value="인증번호받기"></td>
+                                    </tr>
+                                    <tr style="visibility: collapse;" height="40" class="register" id="verifyDiv">
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">인증번호</td>
+                                        <td><input type="text" id="verifyText"> <input type="button" class="btn1"
+                                                onclick="checkCode()" value="        확 인       "></td>
+                                    </tr>
+                                    <tr height="7">
+                                        <td colspan="3">
+                                            <hr />
+                                        </td>
+                                    </tr>
+                                    <tr class="register" height="30">
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">이메일</td>
+                                        <td><input type="email" name="wUserEmail" id="useremail"
+                                                onchange="validateEmail()" />&nbsp&nbsp;<span id="val"></span></td>
+                                    </tr>
+                                    <!--
+                                    <tr height="7">
+                                        <td colspan="3">
+                                            <hr />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="5%" align="center">*</td>
+                                        <td width="15%">주 소</td>
+                                        <td>
+                                            <input type="text" size="10" name="wPostCode" id="sample4_postcode"
+                                                placeholder="우편번호" readonly="readonly" onclick="sample4_execDaumPostcode()">
+                                            <input type="button" class="btn1" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br><br />
+                                            <input type="text" size="30" name="wRoadAddress" id="sample4_roadAddress"
+                                                placeholder="도로명주소" readonly="readonly" onclick="sample4_execDaumPostcode()">
+                                            <input type="text" size="30" name="wJibunAddress" id="sample4_jibunAddress"
+                                                placeholder="지번주소" readonly="readonly" onclick="sample4_execDaumPostcode()">
+                                            <br /><span id="guide" style="color:#999;display:none"></span>
+                                            <br /><input type="text" name="wRestAddress" id="sample4_detailAddress" placeholder="나머지 주소"
+                                                size="70" />
+                                        </td>
+                                    </tr>
+                                    -->
+                                    <td colspan="3"></td>
+                                </table>
+                                <br /><br />
+                            </form>
+                        </center>
+                    </div>
+                </div>
+                <div class="col-lg-12 text-white">
+                    ※ 회원가입 성공시 출력되는 프라이빗키는 안전한 곳에 보관해주세요.<br>
+                    계약서 진행에 사용되며, 분실시 복구가 불가능합니다.<br><br>
+                </div>
+                <div class="col-lg-12 text-centercol-lg-4 col-md-6 text-center">
+                    <button class="btn text-uppercase" id="loginbtn" onclick="register();">회 원 가 입</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================ start footer Area ================= -->
+    <footer class="footer-area section-gap">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="index.html">ALIBI Home</a></li>
+                <li><a href="about.html">About ALIBI</a></li>
+                <li><a href="apply.html">Apply Part-time Job</a></li>
+                <li><a href="verify.html">Verify yourself</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="https://eos.io/">EOSIO</a></li>
+                <li><a href="https://www.albamon.com/">알바몬</a></li>
+                <li><a
+                    href="http://www.alba.co.kr/Main.asp?utm_source=google&utm_medium=paidsearch&utm_campaign=brand&utm_content=pc_cpc&utm_term=%EC%95%8C%EB%B0%94%EC%B2%9C%EA%B5%AD&gclid=CjwKCAiAq8f-BRBtEiwAGr3DgSsjp-9O2Gd5N87pPN9BKEyAC1zp3ATI1d-UH9JznRu5BMPbiBXvGBoCIWgQAvD_BwE">
+                    알바천국</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+              <h4>Policy</h4>
+              <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 single-footer-widget">
+              <h4>ALIBI</h4>
+              <ul>
+                <li>백석대학교 / (주)알바왕</li>
+                <li>대표전화 : 041-550-9114</li>
+                <li>사업자번호 : 000-00-00000</li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 single-footer-widget">
+              <h4>Contact</h4>
+              <p>Do you have any questions about ALIBI?</p>
+              <div class="form-wrap" id="mc_embed_signup">
+                <form target="_blank"
+                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                  method="get" class="form-inline">
+                  <input class="form-control" name="text" placeholder="Your Text" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Your Text '" required="" type="text">
+                  <button class="click-btn btn btn-default text-uppercase">Send</button>
+                  <div style="position: absolute; left: -5000px;">
+                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                  </div>
+    
+                  <div class="info"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom row align-items-center">
+            <p class="footer-text m-0 col-lg-8 col-md-12">충청남도 천안시 동남구 백석대학로 1 백석대학교 Tel. 041-550-9114</p>
+    
+            <p class="footer-text m-0 col-lg-8 col-md-12">
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> (주)알바왕 All rights reserved
+            </p>
+            <div class="col-lg-4 col-md-12 footer-social">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-dribbble"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!-- ================ End footer Area ================= -->
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/hexagons.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>
